@@ -59,7 +59,6 @@ def lambda_handler(event, context):
         Key=S3_KEY,
         Body=csv_buffer.getvalue()
     )
-
     return {
         "statusCode": 200,
         "body": json.dumps("✅ 5000 rows of e-commerce data uploaded to S3 successfully")
